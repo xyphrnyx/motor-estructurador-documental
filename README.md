@@ -8,7 +8,7 @@
 
 Este repositorio contiene el historial completo de versiones del **Motor Estructurador Documental**, un sistema de instrucciones diseñado para transformar texto fuente en documentos estructurados con salida dual: **Markdown visual** y **JSON indexado**.
 
-Desarrollado por **nyx** (akaath@icloud.com), este motor ha evolucionado desde una simple plantilla de estructuración hasta un sistema complejo con clasificación documental, trazabilidad, protección anti-inyección y protocolos especializados para scripts y aprendizaje técnico.
+Desarrollado por **Xyphrnyx**, este motor ha evolucionado desde una simple plantilla de estructuración hasta un sistema complejo con clasificación documental, trazabilidad, protección anti-inyección y protocolos especializados para scripts y aprendizaje técnico.
 
 ---
 
@@ -43,7 +43,7 @@ Desarrollado por **nyx** (akaath@icloud.com), este motor ha evolucionado desde u
 
 Este repositorio contiene el historial completo de versiones del **Motor Estructurador Documental**, un sistema de instrucciones diseñado para transformar texto fuente en documentos estructurados con salida dual: **Markdown visual** y **JSON indexado**.
 
-Desarrollado por **nyx** (akaath@icloud.com), este motor ha evolucionado desde una simple plantilla de estructuración hasta un sistema complejo con clasificación documental, trazabilidad, protección anti-inyección y protocolos especializados para scripts y aprendizaje técnico.
+Desarrollado por **Xyphrnyx**, este motor ha evolucionado desde una simple plantilla de estructuración hasta un sistema complejo con clasificación documental, trazabilidad, protección anti-inyección y protocolos especializados para scripts y aprendizaje técnico.
 
 ---
 
@@ -65,7 +65,7 @@ Desarrollado por **nyx** (akaath@icloud.com), este motor ha evolucionado desde u
 ## 🚀 Cómo usar este repositorio
 
 ### Ver una versión específica
-git checkout v0.0.0   # o beta2, beta4, beta5, beta6
+git checkout v0.0.0   # o beta2, beta4, beta5, beta6, beta6.1
 
 ## Comparar dos versiones
 git diff beta4 beta5
@@ -95,10 +95,10 @@ Consulta el archivo CHANGELOG.md para el detalle completo de cada transición en
 La carpeta evals/ contiene plantillas para registrar métricas de rendimiento de cada versión. Si has realizado pruebas A/B con diferentes versiones, puedes documentar los resultados allí.
 
 ## 📄 Licencia y autoría
-© 2026 nyx. Todos los derechos reservados.
+© 2026 Xyphrnyx. Todos los derechos reservados.
 
 El motor y sus versiones son propiedad intelectual de su autor. Este repositorio es público únicamente con fines de documentación y trazabilidad.
 
 Este repositorio es personal y no se aceptan contribuciones externas. Sin embargo, si encuentras un error en la documentación, puedes abrir un issue.
 
-## Última actualización: 2026-09-04
+## Última actualización: 2026-09-12
