@@ -4,6 +4,18 @@ Este documento registra la evolución del prompt entre versiones, basado en el a
 
 ---
 
+## [beta6.1] - 2026-09-12
+
+### Cambios
+
+- Actualización de autoría: `AKaaTH_dev` → `Xyphrnyx`
+  - `<autor_sistema>` en METADATOS_DEL_MOTOR
+  - Texto visible de autoría y copyright
+  - `engine_author` en el bloque JSON de authorship
+- `schema_id` permanece como `AKaaTH-MOTOR-BETA6-OUTPUT` por compatibilidad de contrato
+- Sin cambios funcionales en el contrato JSON ni en el schema 6.0.0
+- Sin regresiones respecto a beta6
+
 ## [beta6] - 2026-07-28
 
 ### Cambios principales (reescritura casi completa)
