@@ -23,6 +23,7 @@ Desarrollado por **nyx** (akaath@icloud.com), este motor ha evolucionado desde u
 | **beta4** | 2026-05-23 | Historial de versiones interno |
 | **beta5** | 2026-05-23 | Clasificación automática + ISO 15489 |
 | **beta6** | 2026-07-28 | Honestidad operativa + anti-inyección + protocolo para scripts |
+| **beta6.1** | 2026-09-12 | actualización de autoría (Xyphrnyx) |
 <!-- VERSIONES_FIN -->
 
 > **Nota:** beta3 no se recibió como archivo independiente; solo existe referenciado en los historiales de beta4 y beta5. Se documenta como versión "fantasma".
