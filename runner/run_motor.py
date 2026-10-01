@@ -8,7 +8,7 @@ Lee:
   <source>
 
 Envía el prompt como `instructions` y el documento delimitado por
-<TEXTO_FUENTE>...</TEXTO_FUENTE> como `input` a OpenRouter Responses API.
+<TEXTO_FUENTE>...</TEXTO_FUENTE> como `input` a OpenRouter Chat Completions API.
 
 No modifica el prompt versionado.
 """
@@ -168,16 +168,16 @@ def main() -> int:
     )
 
     try:
-        response = client.responses.create(
+        response = client.chat.completions.create(
             model=args.model,
-            input=[
+            messages=[
                 {"role": "system", "content": prompt},
                 {"role": "user", "content": source_payload},
             ],
-            max_output_tokens=args.max_output_tokens,
+            max_completion_tokens=args.max_output_tokens,
         )
 
-        output_text = response.output_text or ""
+        output_text = response.choices[0].message.content or ""
         if not output_text.strip():
             raise RuntimeError("La API devolvió output_text vacío.")
 
