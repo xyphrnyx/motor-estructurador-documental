@@ -175,6 +175,11 @@ def main() -> int:
                 {"role": "user", "content": source_payload},
             ],
             max_completion_tokens=args.max_output_tokens,
+            extra_body={
+                "reasoning": {
+                    "enabled": False
+                }
+            },
         )
 
         output_text = response.choices[0].message.content or ""
