@@ -82,7 +82,7 @@ Ejecuta el workflow.
 Al finalizar, descarga el artifact generado para revisar los resultados.
 Para usar el proveedor configurado actualmente en esta primera capa se requiere el secret de repositorio:
 ```text
-XAI_API_KEY
+OPENROUTER_API_KEY
 ```
 La clave debe guardarse en GitHub → Settings → Secrets and variables → Actions. No debe escribirse dentro del repositorio.
 ---

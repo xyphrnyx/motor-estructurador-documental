@@ -10,10 +10,10 @@ on:
         default: "beta6.1"
 
       model:
-        description: "Modelo xAI/Grok a usar"
+        description: "Modelo OpenRouter a usar"
         required: true
         type: string
-        default: "grok-4.7"
+        default: "openrouter/free"
 
       source:
         description: "Ruta del documento fuente dentro del repositorio"
@@ -96,20 +96,20 @@ jobs:
       - name: Instalar dependencias
         run: python -m pip install -r requirements.txt
 
-      - name: Verificar secreto xAI
+      - name: Verificar secreto OpenRouter
         env:
-          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         shell: bash
         run: |
-          if [ -z "$XAI_API_KEY" ]; then
-            echo "::error::Falta el secret XAI_API_KEY."
+          if [ -z "$OPENROUTER_API_KEY" ]; then
+            echo "::error::Falta el secret OPENROUTER_API_KEY."
             exit 1
           fi
 
       - name: Ejecutar Motor
         id: motor
         env:
-          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         shell: bash
         run: |
           set -euo pipefail

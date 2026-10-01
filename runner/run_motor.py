@@ -8,7 +8,7 @@ Lee:
   <source>
 
 Envía el prompt como `instructions` y el documento delimitado por
-<TEXTO_FUENTE>...</TEXTO_FUENTE> como `input` a xAI Responses API.
+<TEXTO_FUENTE>...</TEXTO_FUENTE> como `input` a OpenRouter Responses API.
 
 No modifica el prompt versionado.
 """
@@ -91,7 +91,7 @@ def serializable_usage(response: Any) -> dict[str, Any] | None:
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser()
     p.add_argument("--version", default="beta6.1")
-    p.add_argument("--model", default=os.getenv("XAI_MODEL", "grok-4.7"))
+    p.add_argument("--model", default=os.getenv("OPENROUTER_MODEL", "openrouter/free"))
     p.add_argument("--source", required=True)
     p.add_argument("--max-output-tokens", type=int, default=32000)
     return p.parse_args()
@@ -163,8 +163,8 @@ def main() -> int:
     )
 
     client = OpenAI(
-        api_key=os.environ["XAI_API_KEY"],
-        base_url="https://api.x.ai/v1",
+        api_key=os.environ["OPENROUTER_API_KEY"],
+        base_url="https://openrouter.ai/api/v1",
     )
 
     try:
@@ -175,7 +175,6 @@ def main() -> int:
                 {"role": "user", "content": source_payload},
             ],
             max_output_tokens=args.max_output_tokens,
-            store=False,
         )
 
         output_text = response.output_text or ""
