@@ -176,11 +176,6 @@ def main() -> int:
             ],
             max_output_tokens=args.max_output_tokens,
             store=False,
-            metadata={
-                "motor_version": args.version[:512],
-                "source_file": source_path.name[:512],
-                "runner_version": RUNNER_VERSION,
-            },
         )
 
         output_text = response.output_text or ""
