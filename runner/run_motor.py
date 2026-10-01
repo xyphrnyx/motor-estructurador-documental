@@ -172,6 +172,40 @@ def main() -> int:
             model=args.model,
             messages=[
                 {"role": "system", "content": prompt},
+                {
+                    "role": "system",
+                    "content": """<RUNTIME_OUTPUT_GUARD>
+Cumple íntegramente la sección COMPROBACION_INTERNA_PREVIA del Motor.
+
+processing_record.self_check.checks DEBE contener las 18 comprobaciones
+individuales exigidas por Beta6.1, no un resumen ni una selección parcial.
+
+Incluye una entrada separada para cada una de estas comprobaciones:
+
+1. delimitación y existencia de la fuente
+2. conservación de información útil
+3. clasificación y suma de rúbrica
+4. correspondencia score-confianza
+5. activación correcta del fallback
+6. separación entre fuente y contenedor
+7. sincronización visual-JSON
+8. estados tipados de metadatos ausentes
+9. honestidad de recursos y validación externa
+10. código y estados de ejecución, cuando aplique
+11. generated_at y session_id coincidentes
+12. JSON sintácticamente válido
+13. ausencia de secretos evidentes no redactados
+14. riesgo de truncamiento
+15. contradicciones, cambios de versión y alternativas preservados correctamente
+16. fuentes, referencias y activos separados de recursos internos del motor
+17. source_trace sin referencias inventadas
+18. índice estratégico-operativo activado u omitido según evidencia
+
+No declares self_check.status="pass" si faltan comprobaciones.
+No omitas comprobaciones aunque alguna resulte no aplicable; registra su estado
+honestamente.
+</RUNTIME_OUTPUT_GUARD>"""
+                },
                 {"role": "user", "content": source_payload},
             ],
             max_completion_tokens=args.max_output_tokens,
