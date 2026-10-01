@@ -18,3 +18,5 @@ output-*.json
 # No subir versiones de trabajo local
 *-working.md
 *-draft.md
+__pycache__/
+*.pyc
