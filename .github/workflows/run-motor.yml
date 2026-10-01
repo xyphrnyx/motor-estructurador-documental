@@ -10,10 +10,10 @@ on:
         default: "beta6.1"
 
       model:
-        description: "Modelo OpenAI a usar"
+        description: "Modelo xAI/Grok a usar"
         required: true
         type: string
-        default: "gpt-5.6"
+        default: "grok-4.7"
 
       source:
         description: "Ruta del documento fuente dentro del repositorio"
@@ -50,10 +50,10 @@ jobs:
 
     steps:
       - name: Descargar repositorio
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Configurar Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.12"
           cache: "pip"
@@ -96,20 +96,20 @@ jobs:
       - name: Instalar dependencias
         run: python -m pip install -r requirements.txt
 
-      - name: Verificar secreto OpenAI
+      - name: Verificar secreto xAI
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
         shell: bash
         run: |
-          if [ -z "$OPENAI_API_KEY" ]; then
-            echo "::error::Falta el secret OPENAI_API_KEY."
+          if [ -z "$XAI_API_KEY" ]; then
+            echo "::error::Falta el secret XAI_API_KEY."
             exit 1
           fi
 
       - name: Ejecutar Motor
         id: motor
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
         shell: bash
         run: |
           set -euo pipefail
@@ -135,7 +135,7 @@ jobs:
 
       - name: Guardar resultados como artifact
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: motor-${{ inputs.version }}-${{ github.run_id }}
           path: runs/

@@ -32,7 +32,7 @@ En GitHub:
 2. `Settings`.
 3. `Secrets and variables`.
 4. `Actions`.
-5. Crea un repository secret llamado exactamente `OPENAI_API_KEY`.
+5. Crea un repository secret llamado exactamente `XAI_API_KEY`.
 
 No escribas la clave en el YAML, en `requirements.txt`, en el corpus ni en
 ningún archivo versionado.
@@ -54,7 +54,7 @@ git push origin main
 3. Pulsa `Run workflow`.
 4. Valores iniciales recomendados:
    - version: `beta6.1`
-   - model: `gpt-6-astra`
+   - model: `grok-4.7`
    - source: `test-corpus/technical/hello-motor.txt`
    - max_output_tokens: `32000`
    - fail_on_validation: activado
@@ -137,7 +137,7 @@ arquitecturas:
 ## 8. Modelo
 
 El modelo es un input editable del workflow. El valor inicial es
-`gpt-6-astra`; cámbialo en la interfaz si tu proyecto/API tiene acceso a otro
+`grok-4.7`; cámbialo en la interfaz si tu proyecto/API tiene acceso a otro
 modelo compatible con Responses API.
 
 ## 9. Limitación inicial de formatos
