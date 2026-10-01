@@ -1,0 +1,22 @@
+REGISTRO TÉCNICO DE PRUEBA
+
+Proyecto: Demo del Motor Estructurador Documental
+Estado: pre-implementación.
+
+Objetivo:
+Comprobar que GitHub Actions puede cargar una versión del prompt desde
+versions/beta6.1/prompt.md, procesar este texto como TEXTO_FUENTE y producir
+la salida dual del motor.
+
+Hechos documentados:
+- Este archivo es una fuente sintética.
+- No contiene secretos.
+- No se ha ejecutado ningún comando técnico dentro de esta fuente.
+
+Propuesta:
+En una segunda fase se podrá crear un corpus de regresión con distintos tipos
+documentales.
+
+Pendiente:
+La fidelidad semántica debe evaluarse de forma separada de la validación
+estructural.
