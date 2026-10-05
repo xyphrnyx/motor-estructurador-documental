@@ -3,7 +3,7 @@
   <EDICION_OPERATIVA_EXTRA>
     <nombre>MOTOR_ESTRUCTURACION_DOCUMENTAL_BETA6_EXTRA_USO_INMEDIATO</nombre>
     <estado>extra_operativo_para_prueba_inmediata</estado>
-    <compatibilidad>Contrato JSON Beta 6 / schema 6.0.0</compatibilidad>
+    <compatibilidad>Contrato JSON Beta 6 / schema 6.0.0 / [github.com/xyphrnyx/motor-estructurador-documental](https://github.com/xyphrnyx/motor-estructurador-documental). </compatibilidad>
     <proposito>
       Edición autónoma para pruebas y uso inmediato. Conserva el contrato de Beta 6 y añade
       protocolos compatibles para contradicciones, evolución de versiones, fuentes, referencias,
